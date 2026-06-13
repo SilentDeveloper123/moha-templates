@@ -1,19 +1,33 @@
 # MOHA Templates — Ministry of Home Affairs, Sri Lanka
 
-Static HTML template set for the **Ministry of Home Affairs, Public Administration & Disaster Management — Sri Lanka**. Includes 52 regular content pages plus 11 WordPress template hierarchy pages.
+Static HTML template set for the **Ministry of Home Affairs, Public Administration & Disaster Management — Sri Lanka**. Includes 52 regular content pages and 11 WordPress template hierarchy pages:
+
+```
+front-page.html  →  WordPress front page
+home.html        →  Blog/index posts page
+single.html      →  Single post
+page.html        →  Static page
+category.html    →  Category archive
+tag.html         →  Tag archive
+archive.html     →  Date/other archive
+search.html      →  Search results
+404.html         →  404 error
+singular.html    →  Fallback for single content
+attachment.html  →  Media attachment
+```
 
 ## Project Structure
 
 ```
 moha-templates/
 ├── *.html                    # 52 regular content pages
-├── archive.html              # WordPress template hierarchy pages (11)
-├── front-page.html
+├── front-page.html           # WordPress hierarchy (11)
 ├── home.html
 ├── single.html
 ├── page.html
 ├── category.html
 ├── tag.html
+├── archive.html
 ├── search.html
 ├── 404.html
 ├── singular.html
@@ -43,17 +57,50 @@ moha-templates/
 └── README.md
 ```
 
-## Getting Started
+## How to Use These Templates
 
-Open any `.html` file in a browser. All pages are self-contained static HTML with CDN-hosted dependencies (Tailwind, Font Awesome, jQuery, GLightbox).
+### For Static Hosting (basic)
 
-### CSS Compilation (if editing SCSS)
+1. Open any `.html` file directly in a browser — all pages are self-contained
+2. All assets are loaded from CDN (Tailwind, Font Awesome, jQuery, GLightbox)
+3. No build step required for static use
+4. Placeholder images from `https://placehold.co/` — replace with real images before deployment
+5. Google Maps embed in the footer — update coordinates as needed
+
+### As WordPress Theme Conversion
+
+1. Each `.html` file maps to a WordPress template hierarchy file
+2. **Convert `index.html`** → `header.php`, `footer.php`, `sidebar.php` — extract the common layout shell
+3. **Content pages** (about, services, etc.) → `page-{slug}.php`
+4. **`front-page.html`** → `front-page.php`
+5. **`home.html`** → `home.php`
+6. **`single.html`** → `single.php`
+7. **`page.html`** → `page.php`
+8. **`archive.html`** → `archive.php` (fallback)
+9. **`category.html`** → `category.php`
+10. **`tag.html`** → `tag.php`
+11. **`search.html`** → `search.php`
+12. **`404.html`** → `404.php`
+13. Replace static content with WordPress loop + ACF/WP Query
+14. Replace `css/style.css` with WordPress `style.css` (add theme header comment)
+
+### Regenerating the WP Hierarchy Pages
+
+If you modify the base template (nav, footer, etc.), regenerate all 11 WP files:
+
+```powershell
+.\generate-wp-pages.ps1
+```
+
+This creates fresh copies. The secondary floating menu is inserted automatically after generation.
+
+## Getting Started (Development)
 
 ```bash
 npm install
-npm run build:css     # Production build (compressed)
-npm run dev:css       # Development build (expanded + sourcemap)
-npm run watch:css     # Watch mode
+npm run build:css     # Production CSS build (compressed)
+npm run dev:css       # Development CSS build (expanded + sourcemap)
+npm run watch:css     # Watch SCSS files for changes
 ```
 
 ## Dependencies
@@ -82,16 +129,18 @@ npm run watch:css     # Watch mode
 | **Scroll Animations** | Fade-in on scroll via IntersectionObserver |
 | **Counter Animation** | Incrementing stat numbers on scroll |
 
-## WordPress Integration
+## Customization Checklist
 
-The 11 WordPress template hierarchy pages are generated from `generate-wp-pages.ps1`. They include the full MOHA structure plus a secondary floating menu for mobile/tablet.
+Before deploying, update:
 
-```powershell
-# Regenerate all WP template pages
-.\generate-wp-pages.ps1
-```
-
-After regeneration, the secondary menu is inserted automatically. Regenerate and rebuild if you modify the base template structure.
+- [ ] **Logo** — replace with official logo URL
+- [ ] **Placeholder images** — replace `https://placehold.co/...` with real images
+- [ ] **Google Maps embed** — update coordinates in the footer iframe
+- [ ] **Contact info** — phone, email, address throughout all pages
+- [ ] **Social media links** — update href attributes in the footer
+- [ ] **Meta descriptions** — update `<meta name="description">` per page
+- [ ] **Open hours** — update in the footer if different
+- [ ] **Copyright year** — update in the footer
 
 ## Key Notes
 
