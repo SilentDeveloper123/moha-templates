@@ -1,0 +1,12 @@
+:root {
+  --navy: #{$navy};
+  --green: #{$green};
+  --steel: #{$steel};
+  --maroon: #{$maroon};
+  --green-light: #{$green-light};
+  --green-medium: #{$green-medium};
+}
+
+html { scroll-behavior: smooth; }
+
+body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }

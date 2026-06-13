@@ -1,0 +1,44 @@
+@media (max-width: 639px) {
+  .topbar {
+    .lang-switch { display: flex; gap: 2px; }
+    .topbar-contact { font-size: 10px; }
+    .topbar-contact .topbar-phone { display: inline; }
+  }
+
+  .hero-slider {
+    padding-top: 3rem; padding-bottom: 3rem;
+
+    h1 { font-size: 2rem !important; }
+  }
+
+  .stat-item { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  .section-pad { padding-top: 3rem; padding-bottom: 3rem; }
+  .card-pad { padding: 1.25rem; }
+  .gallery-main { aspect-ratio: 16/9; height: auto !important; }
+  .gallery-sm { aspect-ratio: 4/3; height: auto !important; }
+  .about-badge { position: static; margin-top: 1rem; }
+  .cta-btn { padding-left: 1.25rem; padding-right: 1.25rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .back-to-top { bottom: 5rem; right: 1rem; width: 40px; height: 40px; font-size: 16px; }
+  .secondary-menu-btn { left: 0; }
+
+  .hero-special-tiles {
+    .tile { padding: 0.75rem; }
+    .tile-icon { width: 2rem; height: 2rem; font-size: 0.75rem; }
+    .tile-text { font-size: 0.8125rem; }
+    .tile-date { font-size: 0.6875rem; }
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-slider h1 { font-size: 2.5rem !important; }
+  .stat-item { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .section-pad { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .gallery-main { height: auto !important; }
+  .gallery-sm { aspect-ratio: 4/3; height: auto !important; }
+  .back-to-top { bottom: 6rem; right: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .gallery-main { height: auto !important; }
+  .gallery-sm { aspect-ratio: 4/3; height: auto !important; }
+}

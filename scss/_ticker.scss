@@ -1,0 +1,14 @@
+.news-ticker { background: white; border-bottom: 1px solid #e5e7eb; }
+
+.ticker-track {
+  display: inline-flex; white-space: nowrap;
+  height: 100%; align-items: center; will-change: transform;
+}
+
+.ticker-item {
+  display: inline-flex; align-items: center; gap: 0.5rem; white-space: nowrap;
+  padding: 0 0.75rem; opacity: 1; transform: none;
+}
+
+.ticker-item.active { opacity: 1; transform: none; }
+.ticker-item.exit-left { opacity: 1; transform: none; }
