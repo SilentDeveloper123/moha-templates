@@ -6,7 +6,7 @@
 }
 
 .page-loader.hidden {
-  opacity: 0; visibility: hidden; pointer-events: none;
+  opacity: 0 !important; visibility: hidden !important; pointer-events: none !important;
 }
 
 /* CSS-only fallback: auto-hide loader 3.5s after page load (no JS required) */
