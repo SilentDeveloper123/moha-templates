@@ -1,7 +1,7 @@
 .page-loader {
   position: fixed; inset: 0; z-index: 99999;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  background: #0a1931;
+  background: $navy;
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s;
 }
 
@@ -20,8 +20,8 @@
 
 .loader-spinner {
   width: 44px; height: 44px;
-  border: 3px solid rgba(67, 192, 0, 0.15);
-  border-top-color: #43c000;
+  border: 3px solid $gold-medium;
+  border-top-color: $gold;
   border-radius: 50%;
   animation: loaderSpin 0.8s linear infinite;
 }
