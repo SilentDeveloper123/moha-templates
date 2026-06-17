@@ -10,7 +10,7 @@
 
   &::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-    background: $green; transform: scaleX(0); transform-origin: left;
+    background: $gold; transform: scaleX(0); transform-origin: left;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -19,12 +19,12 @@
 
 /* ── Mobile Nav ── */
 .nav-mobile {
-  background: rgba(10,25,49,0.97); backdrop-filter: blur(20px);
+  background: rgba($navy, 0.97); backdrop-filter: blur(20px);
 
   a {
     transition: all 0.2s;
 
-    &:hover { color: $green !important; transform: translateX(4px); }
+    &:hover { color: $gold !important; transform: translateX(4px); }
   }
 
   .nav-links > a,
@@ -52,61 +52,75 @@
 .back-to-top {
   position: fixed; bottom: 32px; right: 32px; z-index: 9999;
   width: 46px; height: 46px; border-radius: 50%;
-  background: $green; color: white; border: none; cursor: pointer;
+  background: $gold; color: white; border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  font-size: 20px; box-shadow: 0 4px 16px rgba(67,192,0,0.35);
+  font-size: 20px; box-shadow: 0 4px 16px rgba($gold, 0.35);
   opacity: 0; visibility: hidden; transform: translateY(20px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.show { opacity: 1; visibility: visible; transform: translateY(0); }
 
   &:hover {
-    background: #36a000; transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(67,192,0,0.45);
+    background: $gold-dark; transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba($gold, 0.45);
   }
 }
 
 /* ── Pagination ── */
-.pagination a.active { background: $green; color: white; border-color: $green; }
+.pagination a.active { background: $gold; color: white; border-color: $gold; }
 
 /* ── Stats ── */
-.stat-num { color: $green; }
+.stat-num { color: $gold; }
 
 /* ── Sub nav active ── */
-.sub-active { border-left: 3px solid $green !important; background: rgba(67,192,0,0.06); font-weight: 600; }
+.sub-active { border-left: 3px solid $gold !important; background: rgba($gold, 0.06); font-weight: 600; }
 
 /* ── Table ── */
 .table-custom {
   th { background: $navy; color: white; font-weight: 600; font-size: 13px; padding: 12px 16px; }
 
-  td { padding: 12px 16px; border-bottom: 1px solid #f3f4f6; font-size: 14px; }
+  td { padding: 12px 16px; border-bottom: 1px solid $gray-100; font-size: 14px; }
 
-  tr:hover td { background: rgba(67,192,0,0.04); }
+  tr:hover td { background: rgba($gold, 0.04); }
 }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 8px; }
 
-::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-track { background: $gray-50; }
 
 ::-webkit-scrollbar-thumb {
-  background: $green; border-radius: 4px;
+  background: $gold; border-radius: 4px;
 
-  &:hover { background: #36a000; }
+  &:hover { background: $gold-dark; }
 }
 
-/* ── Green accent utility ── */
-.text-green-custom { color: $green; }
-.bg-green-custom { background-color: $green; }
-.border-green-custom { border-color: $green; }
-.hover\:text-green-custom:hover { color: $green; }
-.hover\:border-green-custom:hover { border-color: $green; }
+/* ── Gold accent utility ── */
+.text-gold { color: $gold; }
+.bg-gold { background-color: $gold; }
+.border-gold { border-color: $gold; }
+.hover\:text-gold:hover { color: $gold; }
+.hover\:border-gold:hover { border-color: $gold; }
+.hover\:bg-gold-dark:hover { background-color: $gold-dark; }
+
+/* ── Gold gradient ── */
+.gold-gradient {
+  background: linear-gradient(135deg, $gold, $gold-dark);
+}
+
+/* ── Navy accent utility ── */
+.text-navy { color: $navy; }
+.bg-navy { background-color: $navy; }
+.border-navy { border-color: $navy; }
+.hover\:text-navy:hover { color: $navy; }
+.hover\:bg-navy:hover { background-color: $navy; }
+.hover\:border-navy:hover { border-color: $navy; }
 
 /* ── Sub-menu active ── */
 .sidebar-link {
   transition: all 0.2s;
 
-  &:hover { background: rgba(67,192,0,0.06); color: $green; padding-left: 20px; }
+  &:hover { background: rgba($gold, 0.06); color: $gold; padding-left: 20px; }
 }
 
 /* ── Footer social ── */
@@ -114,6 +128,6 @@
   transition: all 0.25s;
 
   &:hover {
-    background: $green; color: white; border-color: $green; transform: translateY(-2px);
+    background: $gold; color: white; border-color: $gold; transform: translateY(-2px);
   }
 }

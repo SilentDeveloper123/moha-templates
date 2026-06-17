@@ -1,5 +1,5 @@
 .banner-page {
-  background: linear-gradient(135deg, $navy 0%, #1a3a6a 50%, $steel 100%);
+  background: linear-gradient(135deg, $navy 0%, $navy-mid 50%, $steel 100%);
   position: relative; overflow: hidden;
 
   &::before {

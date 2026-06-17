@@ -7,7 +7,7 @@
   }
 
   .gslide-desc {
-    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; color: #6B7280;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; color: $gray-500;
   }
 }
 
@@ -15,21 +15,21 @@
   border: 2px solid rgba(255,255,255,0.2) !important;
   border-radius: 50% !important; transition: all 0.2s;
 
-  &:hover { border-color: $green !important; background: $green !important; }
+  &:hover { border-color: $gold !important; background: $gold !important; }
 }
 
 .gnext, .gprev {
   border-radius: 50% !important; transition: all 0.2s;
 
-  &:hover { background: $green !important; }
+  &:hover { background: $gold !important; }
 }
 
 .glightbox-clean .gprev,
-.glightbox-clean .gnext { background: rgba(10,25,49,0.7); }
+.glightbox-clean .gnext { background: rgba($navy, 0.7); }
 
 .gslide-image img { border-radius: 12px !important; }
 
-.goverlay { background: rgba(10,25,49,0.95) !important; backdrop-filter: blur(8px); }
+.goverlay { background: rgba($navy, 0.95) !important; backdrop-filter: blur(8px); }
 
 /* ── Gallery lightbox trigger ── */
 .gallery-trigger {
@@ -39,7 +39,7 @@
     content: '\f002'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
     position: absolute; inset: 0; display: flex;
     align-items: center; justify-content: center;
-    background: rgba(10,25,49,0.5); color: white; font-size: 28px;
+    background: rgba($navy, 0.5); color: white; font-size: 28px;
     opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(2px);
   }
 
