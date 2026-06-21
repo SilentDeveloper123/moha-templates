@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(function ($) {
 
   // ── Page Loader ──
   $(window).on('load', function () { $('#pageLoader').addClass('hidden'); });
@@ -40,8 +40,8 @@ $(document).ready(function () {
   // ── Tabs ──
   $('.tab').on('click', function () {
     var $tabs = $(this).closest('.tab-group').find('.tab');
-    $tabs.removeClass('active').removeClass('border-green-custom text-green-custom').addClass('border-transparent text-gray-400');
-    $(this).addClass('active').removeClass('border-transparent text-gray-400').addClass('border-green-custom text-green-custom');
+    $tabs.removeClass('active').removeClass('border-gold text-gold').addClass('border-transparent text-gray-400');
+    $(this).addClass('active').removeClass('border-transparent text-gray-400').addClass('border-gold text-gold');
     var target = $(this).data('tab');
     $($(this).closest('.tab-group').parent().find('.tab-panel')).addClass('hidden');
     $('#' + target).removeClass('hidden');
